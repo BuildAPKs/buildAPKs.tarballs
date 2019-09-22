@@ -6,4 +6,4 @@ buildAPKs.tarballs:  GitHub version clones that build with BuildAPKs.  To revers
 
 [https://github.com/BuildAPKs/buildAPKs.tarballs/](https://github.com/BuildAPKs/buildAPKs.tarballs/)
 
-#EOM
+<!-- README.md EOF -->
