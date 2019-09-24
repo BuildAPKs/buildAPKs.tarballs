@@ -13,4 +13,5 @@ printf "\\nChecking sha256sum...\\n"
 sha256sum -c sha256.sum
 printf "\\nChecking sha512sum...\\n"
 sha512sum -c sha512.sum
+
 # make.sum.sh EOF
