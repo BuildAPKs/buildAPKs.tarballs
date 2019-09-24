@@ -3,6 +3,7 @@
 # by BuildAPKs https://buildapks.github.io
 #####################################################################
 set -e -u
+
 md5sum * > md5.sum
 sha256sum * > sha256.sum
 sha512sum * > sha512.sum
@@ -14,4 +15,4 @@ sha256sum -c sha256.sum
 printf "\\nChecking sha512sum...\\n"
 sha512sum -c sha512.sum
 
-# make.sum.sh EOF
+# make.sums.sh EOF
