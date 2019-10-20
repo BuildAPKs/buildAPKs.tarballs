@@ -14,17 +14,19 @@ do
  	printf "%s\\n" "Creating $SCHECK file: Please wait a moment..."
 	for FILE in "${FILELIST[@]}"
 	do
-		$SCHECK "$FILE" >> ztree.${SCHECK::-3}.sum
+		$SCHECK "$FILE" >> ${SCHECK::-3}.sum
 	done
+	chmod 444 ${SCHECK::-3}.sum
 done
 for SCHECK in  ${CHECKLIST[@]}
 do
 	printf  "\\n%s\\n" "Checking $SCHECK..."
-	$SCHECK -c ztree.${SCHECK::-3}.sum
+	$SCHECK -c ${SCHECK::-3}.sum
 done
+git pull
 git add .
 git commit
 git push
-ls -og
+ls
 printf "\\e[1;38;5;112m%s\\e[0m\\n" "$PWD"
 # do.sums.sh EOF
