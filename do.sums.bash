@@ -16,7 +16,7 @@ do
 	do
 		$SCHECK "$FILE" >> ${SCHECK::-3}.sum
 	done
-	chmod 444 ${SCHECK::-3}.sum
+	chmod 400 ${SCHECK::-3}.sum
 done
 for SCHECK in  ${CHECKLIST[@]}
 do
