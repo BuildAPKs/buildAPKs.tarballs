@@ -5,5 +5,4 @@ buildAPKs.tarballs:  GitHub version clones that build with BuildAPKs.  To revers
 [https://buildapks.github.io/buildAPKs.tarballs/](https://buildapks.github.io/buildAPKs.tarballs/)
 
 [https://github.com/BuildAPKs/buildAPKs.tarballs/](https://github.com/BuildAPKs/buildAPKs.tarballs/)
-
 <!-- README.md EOF -->
