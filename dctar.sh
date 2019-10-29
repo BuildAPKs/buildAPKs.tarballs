@@ -42,15 +42,16 @@ elif [ $1 = 0 ]
 then
 	if [ ${PWD##*/} = "buildAPKs.tarballs" ]
 	then
-		LTYPE="$(ls)" || _PRINTCPF_ 
+		FLIST="CHANGE.log LICENSE README.md *.sh *.bash *.zip"
 		mkdir -p $TMPDIR/buildAPKs.tarballs.$$
-		cp CHANGE.log $TMPDIR/buildAPKs.tarballs.$$
-		cp LICENSE $TMPDIR/buildAPKs.tarballs.$$
-		cp README.md $TMPDIR/buildAPKs.tarballs.$$
-		cp *.sh $TMPDIR/buildAPKs.tarballs.$$
-		cp *.bash $TMPDIR/buildAPKs.tarballs.$$
-		cp *.zip $TMPDIR/buildAPKs.tarballs.$$
- 		_PTGS_
+		for i in $FLIST
+		do
+			cp $i $TMPDIR/buildAPKs.tarballs.$$ 
+		done
+		LTYPE="$(ls)" || _PRINTCPF_ 
+  		_PTGS_
+		cp $TMPDIR/buildAPKs.tarballs.$$/* . 
+ 		rm -rf $TMPDIR/buildAPKs.tarballs.$$
 	else
 		_PRINTCPF_ 
 	fi
